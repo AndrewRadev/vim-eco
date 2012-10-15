@@ -1,6 +1,6 @@
 " Language:    Eco
 " Maintainer:  Andrew Radev <andrey.radev@gmail.com>
-" URL:         http://github.com/kchmck/vim-coffee-script
+" URL:         http://github.com/AndrewRadev/vim-eco
 
 if exists("b:did_ftplugin")
   finish
