@@ -19,8 +19,8 @@ Naturally, pull request with fixes or interesting new features are always
 welcome.
 
 [eco]: https://github.com/sstephenson/eco
-[vim-coffee-script](https://github.com/kchmck/vim-coffee-script)
-[ftplugin/eco.vim](https://github.com/AndrewRadev/vim-eco/blob/master/ftplugin/eco.vim)
+[vim-coffee-script]: https://github.com/kchmck/vim-coffee-script
+[ftplugin/eco.vim]: https://github.com/AndrewRadev/vim-eco/blob/master/ftplugin/eco.vim
 
 ### Install from a Zipball
 
