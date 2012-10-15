@@ -36,7 +36,7 @@ This is the quickest way to get things running.
 
 These steps are also used to update the plugin.
 
-[zipball-vim]: TODO
+[zipball-vim]: http://www.vim.org/scripts/script.php?script_id=4270
 [zipball-github]: https://github.com/AndrewRadev/vim-eco/downloads
 
 ### Install with Pathogen
