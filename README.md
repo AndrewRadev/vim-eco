@@ -88,3 +88,23 @@ hi link coffeeReservedError NONE
 ```
 
 Note: this affects coffeescript highlighting as well
+
+#### Disable missing colon error
+
+A few coffeescript control structures -- if-clauses, else-clauses and
+for-cycles -- need to end with a colon, like so:
+
+``` eco
+<% if foo: %>
+  bar
+<% else: %>
+  baz
+<% end %>
+```
+
+If there's no colon at the end of these, they will be highlighted as errors.
+This can be disabled with:
+
+``` vim
+hi link ecoMissingColonError NONE
+```

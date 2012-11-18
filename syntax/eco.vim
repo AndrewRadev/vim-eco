@@ -53,6 +53,9 @@ syn region ecoComment matchgroup=ecoComment start=/<%#/ end=/%>/ contains=@coffe
 " eco features not in coffeescript proper
 syn keyword ecoEnd end containedin=@ecoRegions
 syn match ecoIndentColon /\s+\w+:/ containedin=@ecoRegions
+syn match ecoMissingColonError /\<else\>\ze[^:]\{-}\s*%>/ containedin=@ecoRegions
+syn match ecoMissingColonError /\<if\>[^:]\{-}\ze\s*%>/ containedin=@ecoRegions
+syn match ecoMissingColonError /\<for\>[^:]\{-}\<in\>[^:]\{-}\ze\s*%>/ containedin=@ecoRegions
 
 " Define the default highlighting.
 
@@ -60,6 +63,7 @@ hi def link ecoDelimiter Delimiter
 hi def link ecoComment Comment
 hi def link ecoEnd coffeeConditional
 hi def link ecoIndentColon None
+hi def link ecoMissingColonError Error
 
 let b:current_syntax = 'eco'
 
