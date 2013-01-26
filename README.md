@@ -6,6 +6,7 @@ Included features:
   - automatic indenting
   - syntax highlighting
   - surround.vim support (see [ftplugin/eco.vim] for details)
+  - `=` text object for code blocks (see [ftplugin/eco.vim] for details)
 
 Some of the code here depends on [vim-coffee-script], so it's required that you
 install that before installing this plugin. The master branch should always be
