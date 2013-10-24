@@ -53,9 +53,9 @@ syn region ecoComment matchgroup=ecoComment start=/<%#/ end=/%>/ contains=@coffe
 " eco features not in coffeescript proper
 syn keyword ecoEnd end containedin=@ecoRegions
 syn match ecoIndentColon /\s+\w+:/ containedin=@ecoRegions
-syn match ecoMissingColonError /\<else\>\ze[^:]\{-}\s*%>/ containedin=@ecoRegions
-syn match ecoMissingColonError /\<if\>[^:]\{-}\ze\s*%>/ containedin=@ecoRegions
-syn match ecoMissingColonError /\<for\>[^:]\{-}\<in\>[^:]\{-}\ze\s*%>/ containedin=@ecoRegions
+syn match ecoMissingColonError /\(<%[=-]\=\s*\)\@<=else\>\ze[^:]\{-}\s*%>/ containedin=@ecoRegions
+syn match ecoMissingColonError /\(<%[=-]\=\s*\)\@<=if\>[^:]\{-}\ze\s*%>/ containedin=@ecoRegions
+syn match ecoMissingColonError /\(<%[=-]\=\s*\)\@<=for\>[^:]\{-}\<in\>[^:]\{-}\ze\s*%>/ containedin=@ecoRegions
 
 " Define the default highlighting.
 
