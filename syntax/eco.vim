@@ -54,7 +54,7 @@ syn region ecoComment matchgroup=ecoComment start=/<%#/ end=/%>/ contains=@coffe
 syn keyword ecoEnd end containedin=@ecoRegions
 syn match ecoIndentColon /\s+\w+:/ containedin=@ecoRegions
 syn match ecoMissingColonError /\(<%[=-]\=\s*\)\@<=else\>\ze[^:]\{-}\s*%>/ containedin=@ecoRegions
-" syn match ecoMissingColonError /\(<%[=-]\=\s*\)\@<=if\>[^:]\{-}\ze\s*%>/ containedin=@ecoRegions
+syn match ecoMissingColonError /\(<%[=-]\=\s*\)\@<=if\>\%(.*then.*else\)\@![^:]\{-}\ze\s*%>/ containedin=@ecoRegions
 syn match ecoMissingColonError /\(<%[=-]\=\s*\)\@<=for\>[^:]\{-}\<in\>[^:]\{-}\ze\s*%>/ containedin=@ecoRegions
 
 " Define the default highlighting.
