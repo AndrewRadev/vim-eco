@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.eco set filetype=eco
+autocmd BufNewFile,BufRead *.eco set filetype=eco.html
