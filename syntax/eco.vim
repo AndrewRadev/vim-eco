@@ -41,6 +41,7 @@ endif
 
 if exists("b:eco_subtype") && b:eco_subtype != '' && b:eco_subtype != 'eco'
   exec "runtime! syntax/".b:eco_subtype.".vim"
+  silent! unlet b:current_syntax
   syn include @coffeeTop syntax/coffee.vim
 endif
 
