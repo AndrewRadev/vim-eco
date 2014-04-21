@@ -32,7 +32,7 @@ let b:html_indentexpr = &l:indentexpr
 let b:did_indent = 1
 
 setlocal indentexpr=GetEcoIndent(v:lnum)
-setlocal indentkeys=o,O,*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=when
+setlocal indentkeys=*<Return>,<>>,{,},0),0],o,O,!^F,=end,=else,=when,<:>
 
 " Only define the function once.
 if exists("*GetEcoIndent")
