@@ -15,6 +15,8 @@ runtime! indent/coffee.vim
 unlet! b:did_indent
 setlocal indentexpr=
 
+let b:html_indent_usestate = 0
+
 runtime! indent/html.vim
 unlet! b:did_indent
 
@@ -38,6 +40,16 @@ if exists("*GetEcoIndent")
 endif
 
 function! GetEcoIndent(lnum)
+  " Workaround for Andy Wokula's HTML indent. This should be removed after
+  " some time, since the newest version is fixed in a different way.
+  if b:html_indentexpr =~# '^HtmlIndent('
+	\ && exists('b:indent')
+	\ && type(b:indent) == type({})
+	\ && has_key(b:indent, 'lnum')
+    " Force HTML indent to not keep state
+    let b:indent.lnum = -1
+  endif
+
   let vcol = col('.')
   call cursor(v:lnum,1)
   let incoffee = searchpair('<%','','%>','W')
