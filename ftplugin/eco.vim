@@ -6,6 +6,7 @@ if exists("b:did_ftplugin")
   finish
 endif
 
+runtime! ftplugin/html.vim ftplugin/html_*.vim ftplugin/html/*.vim
 let b:did_ftplugin = 1
 
 " surround.vim additions
