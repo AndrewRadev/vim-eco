@@ -9,6 +9,27 @@ endif
 runtime! ftplugin/html.vim ftplugin/html_*.vim ftplugin/html/*.vim
 let b:did_ftplugin = 1
 
+" Matchit support, adding to the html one
+let s:match_words =
+      \ '\<\%(if\|unless\|switch\|while\|until\|for\)\>=\@!' .
+      \ ':' .
+      \ '\<\%(else\|elsif\|when\|break\|continue\)\>' .
+      \ ':' .
+      \ '\<end\>' .
+      \ ',{:},\[:\],(:)'
+
+if exists('b:match_words')
+  let b:match_words = b:match_words . ',' .s:match_words
+else
+  let b:match_words = s:match_words
+endif
+
+let b:match_skip =
+      \ "synIDattr(synID(line('.'),col('.'),0),'name') =~ '" .
+      \ "\\<coffee\\%(String\\|BlockComment\\|Heredoc\\|Comment\\)\\|".
+      \ "\\<ecoComment\\>".
+      \ "'"
+
 " surround.vim additions
 "
 " Usage:
